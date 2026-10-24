@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone | Play Beyond Limits</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo" id="homeLink">🎮 Game<span>Zone</span></a>
+    <nav>
+      <a href="#home" id="navHome">Home</a>
+      <a href="#games" id="navGames">Games</a>
+      <a href="#about" id="navAbout">About</a>
+    </nav>
+    <div class="online"><span></span> READY TO PLAY</div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">✦ YOUR NEXT ADVENTURE STARTS HERE</div>
+        <h1>PLAY BEYOND<br><span>LIMITS.</span></h1>
+        <p>Enter the zone. Discover games, beat your scores, and become a legend.</p>
+        <button class="primary-btn" id="exploreBtn">
+          Explore Games <span>→</span>
+        </button>
+        <div class="hero-stats">
+          <div><strong>05</strong><small>MINI-GAMES</small></div>
+          <div><strong>∞</strong><small>FUN TO PLAY</small></div>
+          <div><strong>FREE</strong><small>ALWAYS</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-controller">🎮</div>
+        <div class="float-card float-one">⚡ POWER UP!</div>
+        <div class="float-card float-two">🏆 NEW RECORD?</div>
+      </div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE GAME LIBRARY</div>
+          <h2>Choose Your <span>Game</span></h2>
+          <p>Five games. Five challenges. Your move.</p>
+        </div>
+        <div class="game-count">05 GAMES AVAILABLE</div>
+      </div>
+
+      <div class="search-wrap">
+        <span>⌕</span>
+        <input id="gameSearch" type="search" placeholder="Search games..." aria-label="Search games">
+      </div>
+
+      <div class="game-grid" id="gameGrid">
+        <article class="game-card" data-name="snake">
+          <div class="game-art snake-art"><span>🐍</span><i>ARCADE</i></div>
+          <div class="game-info">
+            <div><h3>Snake</h3><p>Eat, grow, don't crash!</p></div>
+            <span class="game-number">01</span>
+          </div>
+          <button class="play-btn" data-game="snake">Play Now <span>→</span></button>
+        </article>
+
+        <article class="game-card" data-name="tic tac toe">
+          <div class="game-art ttt-art"><span>⭕ ❌</span><i>STRATEGY</i></div>
+          <div class="game-info">
+            <div><h3>Tic-Tac-Toe</h3><p>Can you beat the board?</p></div>
+            <span class="game-number">02</span>
+          </div>
+          <button class="play-btn" data-game="ttt">Play Now <span>→</span></button>
+        </article>
+
+        <article class="game-card" data-name="rock paper scissors">
+          <div class="game-art rps-art"><span>✊ ✋ ✌️</span><i>QUICK PLAY</i></div>
+          <div class="game-info">
+            <div><h3>Rock Paper Scissors</h3><p>Challenge the computer.</p></div>
+            <span class="game-number">03</span>
+          </div>
+          <button class="play-btn" data-game="rps">Play Now <span>→</span></button>
+        </article>
+
+        <article class="game-card" data-name="car racing">
+          <div class="game-art racing-art"><span>🏎️</span><i>RACING</i></div>
+          <div class="game-info">
+            <div><h3>Car Racing</h3><p>Dodge traffic. Beat your score.</p></div>
+            <span class="game-number">04</span>
+          </div>
+          <button class="play-btn" data-game="racing">Play Now <span>→</span></button>
+        </article>
+
+        <article class="game-card" data-name="memory match">
+          <div class="game-art memory-art"><span>🧠</span><i>PUZZLE</i></div>
+          <div class="game-info">
+            <div><h3>Memory Match</h3><p>Find all matching pairs.</p></div>
+            <span class="game-number">05</span>
+          </div>
+          <button class="play-btn" data-game="memory">Play Now <span>→</span></button>
+        </article>
+      </div>
+      <p id="noResults" class="no-results" hidden>No games found. Try another search!</p>
+    </section>
+
+    <section class="game-room" id="gameRoom" hidden>
+      <div class="room-top">
+        <button id="backBtn" class="secondary-btn">← All Games</button>
+        <span class="playing-label"><span></span> NOW PLAYING</span>
+      </div>
+      <h2 id="gameTitle">Game</h2>
+      <p id="gameDescription" class="room-description"></p>
+      <div id="gameContent" class="game-content"></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="eyebrow">MADE FOR PLAYERS</div>
+      <h2>Your Game. <span>Your Rules.</span></h2>
+      <p>GameZone is your little gaming universe, built with HTML, CSS and JavaScript. Pick a game and have fun!</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo" id="footerHome">🎮 Game<span>Zone</span></a>
+    <p>Built for fun. Powered by code. © 2026 GameZone</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
