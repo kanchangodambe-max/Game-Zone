@@ -745,3 +745,24 @@ function startRacing() {
     document.removeEventListener("keydown", keyHandler);
   };
 }
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then(() => {
+        console.log("GameZone app support is ready!");
+      })
+      .catch((error) => {
+        console.error("Service worker error:", error);
+      });
+  });
+}
+
+let gameZoneInstallPrompt = null;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  gameZoneInstallPrompt = event;
+  console.log("GameZone can be installed!");
+});

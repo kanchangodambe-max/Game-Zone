@@ -1,0 +1,21 @@
+
+{
+  "id": "./",
+  "name": "GameZone",
+  "short_name": "GameZone",
+  "description": "Play games on GameZone!",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0b18",
+  "theme_color": "#702cff",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
